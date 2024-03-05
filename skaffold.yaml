@@ -1,0 +1,15 @@
+apiVersion: skaffold/v4beta8
+kind: Config
+metadata:
+  name: imagepullsecret-patcher
+build:
+  platforms:
+    - linux/arm64
+    - linux/amd64
+  artifacts:
+    - image: imagepullsecret-patcher
+      context: .
+      docker:
+        dockerfile: Dockerfile
+
+     
